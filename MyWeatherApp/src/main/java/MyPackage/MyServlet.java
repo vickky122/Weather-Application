@@ -44,8 +44,8 @@ public class MyServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//API Key
-		String apiKey = "Apni-Api-Key Dalo";
+		//API Key Integration
+		String apiKey = "Insert your own key";
 		// Get the city from the form input
         String city = request.getParameter("city"); 
 
@@ -53,6 +53,7 @@ public class MyServlet extends HttpServlet {
         String apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
 
         try {
+		//API Integration
             URL url = new URL(apiUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
